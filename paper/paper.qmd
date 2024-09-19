@@ -1,0 +1,88 @@
+---
+title: "The trend in Marriage Licenses in light of the pandemic"
+subtitle: "My subtitle if needed"
+author: 
+  - Joyce Lin, Aliza Mithwani, Betty Liu, Manjun Zhu
+thanks: "Code and data are available at: LINK."
+date: today
+date-format: long
+abstract: "This paper looks at Marriage License data. The paper analyzes the trends in attaining marriage licenses. The main trend examined was that after 2020, there was a surge in marriage licenses. This could be related to the COVID-19 pandemic."
+format: pdf
+number-sections: true
+bibliography: references.bib
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+
+data <- read_csv(here::here("data/analysis_data/analysis_data.csv"))
+
+```
+
+
+# Introduction
+
+You can and should cross-reference sections and sub-sections. We use @talia, @opendatatorotno, and @rohan.
+
+The remainder of this paper is structured as follows. @sec-mydatasection
+
+
+
+# Data {#sec-mydatasection}
+
+Some of our data is of penguins (@fig-marriage), from @palmerpenguins.
+
+```{r}
+#| label: fig-marriage
+#| fig-cap: Bills of penguins
+#| echo: false
+
+data |> 
+  ggplot(aes(x = date, y = marriage_licenses)) +
+  geom_point()
+
+```
+
+Talk more about it.
+
+And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
+
+
+
+
+
+# Discussion
+
+## First discussion point {#sec-first-point}
+
+If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+
+## Second discussion point
+
+## Third discussion point
+
+## Weaknesses and next steps
+
+Weaknesses and next steps should also be included.
+
+\newpage
+
+\appendix
+
+# Appendix {-}
+
+
+# Additional data details
+
+
+
+\newpage
+
+
+# References
+citation()
+citation("opendatatoronto")
